@@ -84,7 +84,7 @@ for i in range(2):
 #v1[0,:4]
 
 
-# In[ ]:
+# In[152]:
 
 
 plt.plot()
@@ -92,13 +92,19 @@ plt.plot()
 #plt.scatter(X_scaled[:,3], lasso.predict(X_scaled), marker='^')
 #plt.xlabel(columns[3])
 #plt.ylabel('Price')
-quiver([0, 0], pca_v1[0], V, [C], **kw)
+plt.quiver([0, 0], pca_v1[:,0], pca_v1[1,0])
 
 
 # In[125]:
 
 
 0.53**2+0.58**2+0.27**2+0.54**2
+
+
+# In[148]:
+
+
+pca_v1[0,0]
 
 
 # In[ ]:
