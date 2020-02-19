@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[81]:
+# In[1]:
 
 
 import numpy as np
@@ -14,14 +14,14 @@ from numpy import linalg as LA
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# In[63]:
+# In[2]:
 
 
 data = pd.read_csv('USArrests.csv')
 data2 = pd.read_csv('Cars93.csv')
 
 
-# In[94]:
+# In[3]:
 
 
 #print(np.shape(data))
@@ -41,7 +41,7 @@ states=np.array(data[columns])[:,0]
 #x
 
 
-# In[95]:
+# In[4]:
 
 
 y2 = np.array(data2['Price'])
@@ -52,27 +52,27 @@ x2 = np.array(data2[columns])
 print(np.shape(x2))
 
 
-# In[99]:
+# In[5]:
 
 
 sig1=np.cov(x)
 sig2=np.cov(x2)
 
 
-# In[100]:
+# In[6]:
 
 
 w1, v1=LA.eig(sig1)
 w2, v2=LA.eig(sig2)
 
 
-# In[117]:
+# In[7]:
 
 
 print(w1[0:4])
 
 
-# In[144]:
+# In[8]:
 
 
 pca_v1=np.ones((2,4))
@@ -84,7 +84,7 @@ for i in range(2):
 #v1[0,:4]
 
 
-# In[152]:
+# In[9]:
 
 
 plt.plot()
@@ -92,19 +92,27 @@ plt.plot()
 #plt.scatter(X_scaled[:,3], lasso.predict(X_scaled), marker='^')
 #plt.xlabel(columns[3])
 #plt.ylabel('Price')
-plt.quiver([0, 0], pca_v1[:,0], pca_v1[1,0])
+#plt.quiver([0, 0], pca_v1[:,0])
+plt.quiver([0, 0], 30)
+plt.arrow()
 
 
-# In[125]:
+# In[10]:
 
 
 0.53**2+0.58**2+0.27**2+0.54**2
 
 
-# In[148]:
+# In[11]:
 
 
 pca_v1[0,0]
+
+
+# In[12]:
+
+
+pca_v1[:,0]
 
 
 # In[ ]:
