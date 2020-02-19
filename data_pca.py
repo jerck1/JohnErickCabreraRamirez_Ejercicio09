@@ -72,19 +72,24 @@ w2, v2=LA.eig(sig2)
 print(w1[0:4])
 
 
-# In[116]:
+# In[124]:
 
 
 pca_v1=np.ones((50,2))
-pca_v1[:,0]=v1[0]
-pca_v1[:,1]=v1[1]
 pca_v2=np.ones((93,2))
-pca_v2[:,0]=v2[0]
-pca_v2[:,1]=v2[1]
+for i in range(2):
+    pca_v1[:,i]=v1[i]/LA.norm(v1[i])
+    pca_v2[:,i]=v2[i]/LA.norm(v1[i])
+pca_v1
 
 
 # In[ ]:
 
 
-
+plt.plot()
+#plt.scatter(X, Y)
+#plt.scatter(X_scaled[:,3], lasso.predict(X_scaled), marker='^')
+#plt.xlabel(columns[3])
+#plt.ylabel('Price')
+quiver([0, 0], pca_v1[0], V, [C], **kw)
 
