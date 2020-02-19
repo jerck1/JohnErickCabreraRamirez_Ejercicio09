@@ -84,7 +84,7 @@ for i in range(2):
 #v1[0,:4]
 
 
-# In[9]:
+# In[16]:
 
 
 plt.plot()
@@ -93,8 +93,9 @@ plt.plot()
 #plt.xlabel(columns[3])
 #plt.ylabel('Price')
 #plt.quiver([0, 0], pca_v1[:,0])
-plt.quiver([0, 0], 30)
-plt.arrow()
+#plt.quiver([0, 0], 30)
+plt.arrow([0,0],pca_v1[:,0])
+#plt.arrow((0,0),(1,1))
 
 
 # In[10]:
