@@ -72,15 +72,16 @@ w2, v2=LA.eig(sig2)
 print(w1[0:4])
 
 
-# In[124]:
+# In[144]:
 
 
-pca_v1=np.ones((50,2))
-pca_v2=np.ones((93,2))
+pca_v1=np.ones((2,4))
+pca_v2=np.ones((2,4))
 for i in range(2):
-    pca_v1[:,i]=v1[i]/LA.norm(v1[i])
-    pca_v2[:,i]=v2[i]/LA.norm(v1[i])
-pca_v1
+    pca_v1[i]=v1[i,:4]/LA.norm(v1[i,:4])
+    pca_v2[i]=v2[i,:4]/LA.norm(v2[i,:4])
+#pca_v1[:,0]
+#v1[0,:4]
 
 
 # In[ ]:
@@ -92,4 +93,16 @@ plt.plot()
 #plt.xlabel(columns[3])
 #plt.ylabel('Price')
 quiver([0, 0], pca_v1[0], V, [C], **kw)
+
+
+# In[125]:
+
+
+0.53**2+0.58**2+0.27**2+0.54**2
+
+
+# In[ ]:
+
+
+
 
